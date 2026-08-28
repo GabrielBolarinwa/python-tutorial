@@ -1,7 +1,2 @@
-.idea/vcs.xml
-.idea/python-tutorial.iml
-.idea/prettier.xml
-.idea/modules.xml
-.idea/misc.xml
-.idea/inspectionProfiles/profiles_settings.xml
-__pycache__/python_quiz.cpython-314.pyc
+.idea
+__pycache__
