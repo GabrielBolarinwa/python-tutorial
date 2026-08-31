@@ -76,6 +76,6 @@ class Stopwatch(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    clock = Stopwatch()
-    clock.show()
+    application = Stopwatch()
+    application.show()
     sys.exit(app.exec_())
