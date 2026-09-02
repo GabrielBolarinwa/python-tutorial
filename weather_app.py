@@ -85,7 +85,8 @@ class WeatherApp(QWidget):
             if data["cod"] == 200:
                 self.display_weather(data)
         except HTTPError as http_error:
-            match response.status_code:
+            status_code = http_error.response.status_code if http_error.response else None
+            match status_code:
                 case 400:
                     self.display_error("Bad request\nPlease check your input")
                 case 401:
