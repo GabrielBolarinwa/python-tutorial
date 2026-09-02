@@ -1,10 +1,14 @@
+import os
 import sys
 
 import requests
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout
+from dotenv import load_dotenv
 from requests import HTTPError, RequestException, TooManyRedirects
+
+load_dotenv()
 
 
 class WeatherApp(QWidget):
@@ -71,7 +75,7 @@ class WeatherApp(QWidget):
         self.get_weather_button.clicked.connect(self.get_weather)
 
     def get_weather(self):
-        api_key = "7ce38d2e8444f403c77aa9224fe442a7"
+        api_key = os.getenv("API_KEY")
         city = self.city_input.text()
         api_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
         try:
