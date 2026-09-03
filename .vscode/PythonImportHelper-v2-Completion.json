@@ -1,0 +1,619 @@
+[
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "QTimer",
+        "importPath": "PyQt5.QtCore",
+        "description": "PyQt5.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QIcon",
+        "importPath": "PyQt5.QtGui",
+        "description": "PyQt5.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "importPath": "wordslist",
+        "description": "wordslist",
+        "isExtraImport": true,
+        "detail": "wordslist",
+        "documentation": {}
+    },
+    {
+        "label": "set_alarm",
+        "kind": 2,
+        "importPath": "alarm_app",
+        "description": "alarm_app",
+        "peekOfCode": "def set_alarm(alarm_time):\n    print(f\"Alarm set for {alarm_time}\")\n    sound_file = \"alarm.wav\"\n    is_running = True\n    while is_running:\n        current_time = datetime.datetime.now().strftime(\"%H:%M:%S\")\n        print(current_time)\n        if current_time == alarm_time:\n            print(f\"It's {alarm_time}\")\n            pygame.mixer.init()",
+        "detail": "alarm_app",
+        "documentation": {}
+    },
+    {
+        "label": "show_balance",
+        "kind": 2,
+        "importPath": "banking_program",
+        "description": "banking_program",
+        "peekOfCode": "def show_balance(balance):\n    print(f\"Your balance is ₦{balance:,.2f}\")\ndef deposit():\n    amount = input(\"Enter the amount you want to deposit: \")\n    while not amount.isdigit():\n        print(\"Please enter a valid amount\")\n        amount = input(\"Enter the amount you want to deposit: \")\n    amount = float(amount)\n    while amount < 0:\n        print(\"Please enter an amount greater than 0\")",
+        "detail": "banking_program",
+        "documentation": {}
+    },
+    {
+        "label": "deposit",
+        "kind": 2,
+        "importPath": "banking_program",
+        "description": "banking_program",
+        "peekOfCode": "def deposit():\n    amount = input(\"Enter the amount you want to deposit: \")\n    while not amount.isdigit():\n        print(\"Please enter a valid amount\")\n        amount = input(\"Enter the amount you want to deposit: \")\n    amount = float(amount)\n    while amount < 0:\n        print(\"Please enter an amount greater than 0\")\n        amount = input(\"Enter the amount you want to deposit: \")\n        amount = float(amount)",
+        "detail": "banking_program",
+        "documentation": {}
+    },
+    {
+        "label": "withdraw",
+        "kind": 2,
+        "importPath": "banking_program",
+        "description": "banking_program",
+        "peekOfCode": "def withdraw(balance):\n    amount = input(\"Enter the amount you want to withdraw: \")\n    while not amount.isdigit():\n        print(\"Please enter a valid amount\")\n        amount = input(\"Enter the amount you want to withdraw: \")\n    amount = float(amount)\n    while amount < 0:\n        print(\"Please enter an amount greater than 0\")\n        amount = input(\"Enter the amount you want to withdraw: \")\n        amount = float(amount)",
+        "detail": "banking_program",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "banking_program",
+        "description": "banking_program",
+        "peekOfCode": "def main():\n    balance = 0\n    is_running = True\n    while is_running:\n        print(\"Banking program\")\n        print(\"1. Show Balance\")\n        print(\"2. Deposit\")\n        print(\"3. Withdraw\")\n        print(\"4. Exit\")\n        choice = input(\"Enter your choice (1-4): \")",
+        "detail": "banking_program",
+        "documentation": {}
+    },
+    {
+        "label": "credit_card",
+        "kind": 5,
+        "importPath": "credit_card_validator",
+        "description": "credit_card_validator",
+        "peekOfCode": "credit_card = input(\"Enter your credit card number: \")\ncredit_card = credit_card.replace(\"-\", \"\")\ncredit_card = credit_card.replace(\" \", \"\")\ncredit_card = credit_card[::-1]\nsum_of_odd_digits = 0\nsum_of_even_digits = 0\nfor num in credit_card[::2]:\n    sum_of_odd_digits += int(num)\nfor num in credit_card[1::2]:\n    num = int(num) * 2",
+        "detail": "credit_card_validator",
+        "documentation": {}
+    },
+    {
+        "label": "credit_card",
+        "kind": 5,
+        "importPath": "credit_card_validator",
+        "description": "credit_card_validator",
+        "peekOfCode": "credit_card = credit_card.replace(\"-\", \"\")\ncredit_card = credit_card.replace(\" \", \"\")\ncredit_card = credit_card[::-1]\nsum_of_odd_digits = 0\nsum_of_even_digits = 0\nfor num in credit_card[::2]:\n    sum_of_odd_digits += int(num)\nfor num in credit_card[1::2]:\n    num = int(num) * 2\n    if num >= 10:",
+        "detail": "credit_card_validator",
+        "documentation": {}
+    },
+    {
+        "label": "credit_card",
+        "kind": 5,
+        "importPath": "credit_card_validator",
+        "description": "credit_card_validator",
+        "peekOfCode": "credit_card = credit_card.replace(\" \", \"\")\ncredit_card = credit_card[::-1]\nsum_of_odd_digits = 0\nsum_of_even_digits = 0\nfor num in credit_card[::2]:\n    sum_of_odd_digits += int(num)\nfor num in credit_card[1::2]:\n    num = int(num) * 2\n    if num >= 10:\n        sum_of_even_digits += (1 + (num % 10))",
+        "detail": "credit_card_validator",
+        "documentation": {}
+    },
+    {
+        "label": "credit_card",
+        "kind": 5,
+        "importPath": "credit_card_validator",
+        "description": "credit_card_validator",
+        "peekOfCode": "credit_card = credit_card[::-1]\nsum_of_odd_digits = 0\nsum_of_even_digits = 0\nfor num in credit_card[::2]:\n    sum_of_odd_digits += int(num)\nfor num in credit_card[1::2]:\n    num = int(num) * 2\n    if num >= 10:\n        sum_of_even_digits += (1 + (num % 10))\n    else:",
+        "detail": "credit_card_validator",
+        "documentation": {}
+    },
+    {
+        "label": "sum_of_odd_digits",
+        "kind": 5,
+        "importPath": "credit_card_validator",
+        "description": "credit_card_validator",
+        "peekOfCode": "sum_of_odd_digits = 0\nsum_of_even_digits = 0\nfor num in credit_card[::2]:\n    sum_of_odd_digits += int(num)\nfor num in credit_card[1::2]:\n    num = int(num) * 2\n    if num >= 10:\n        sum_of_even_digits += (1 + (num % 10))\n    else:\n        sum_of_even_digits += num",
+        "detail": "credit_card_validator",
+        "documentation": {}
+    },
+    {
+        "label": "sum_of_even_digits",
+        "kind": 5,
+        "importPath": "credit_card_validator",
+        "description": "credit_card_validator",
+        "peekOfCode": "sum_of_even_digits = 0\nfor num in credit_card[::2]:\n    sum_of_odd_digits += int(num)\nfor num in credit_card[1::2]:\n    num = int(num) * 2\n    if num >= 10:\n        sum_of_even_digits += (1 + (num % 10))\n    else:\n        sum_of_even_digits += num\ntotal = sum_of_odd_digits + sum_of_even_digits",
+        "detail": "credit_card_validator",
+        "documentation": {}
+    },
+    {
+        "label": "total",
+        "kind": 5,
+        "importPath": "credit_card_validator",
+        "description": "credit_card_validator",
+        "peekOfCode": "total = sum_of_odd_digits + sum_of_even_digits\nprint(total)\nif total % 10 == 0:\n    print(\"Your credit card is valid\")\nelse:\n    print(\"Your credit card is not valid\")",
+        "detail": "credit_card_validator",
+        "documentation": {}
+    },
+    {
+        "label": "dice_art",
+        "kind": 5,
+        "importPath": "dice_roller",
+        "description": "dice_roller",
+        "peekOfCode": "dice_art = {\n    1: (\n        \"┌─────────┐\",\n        \"│         │\",\n        \"│    ●    │\",\n        \"│         │\",\n        \"└─────────┘\"\n    ),\n    2: (\n        \"┌─────────┐\",",
+        "detail": "dice_roller",
+        "documentation": {}
+    },
+    {
+        "label": "dice",
+        "kind": 5,
+        "importPath": "dice_roller",
+        "description": "dice_roller",
+        "peekOfCode": "dice = []\ntotal = 0\nwhile True:\n    num_of_dice = input(\"How many dice?: \")\n    if num_of_dice.isdigit():\n        num_of_dice = int(num_of_dice)\n        for die in range(num_of_dice):\n            dice.append(random.randint(1, 6))\n        for line in range(5):\n            for die in dice:",
+        "detail": "dice_roller",
+        "documentation": {}
+    },
+    {
+        "label": "total",
+        "kind": 5,
+        "importPath": "dice_roller",
+        "description": "dice_roller",
+        "peekOfCode": "total = 0\nwhile True:\n    num_of_dice = input(\"How many dice?: \")\n    if num_of_dice.isdigit():\n        num_of_dice = int(num_of_dice)\n        for die in range(num_of_dice):\n            dice.append(random.randint(1, 6))\n        for line in range(5):\n            for die in dice:\n                print(dice_art.get(die)[line], end=\"\")",
+        "detail": "dice_roller",
+        "documentation": {}
+    },
+    {
+        "label": "DigitalClock",
+        "kind": 6,
+        "importPath": "digital_clock",
+        "description": "digital_clock",
+        "peekOfCode": "class DigitalClock(QWidget):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Digital Clock\")\n        self.setWindowIcon(QIcon(\"clock.png\"))\n        self.setGeometry(600, 400, 300, 100)\n        self.time_label = QLabel(\"12:00:00\", self)\n        self.timer = QTimer(self)\n        self.initUI()\n    def initUI(self):",
+        "detail": "digital_clock",
+        "documentation": {}
+    },
+    {
+        "label": "chars",
+        "kind": 5,
+        "importPath": "encryption_program",
+        "description": "encryption_program",
+        "peekOfCode": "chars = string.punctuation + string.digits + string.ascii_letters + \" \"\nchars = list(chars)\nkey = chars.copy()\nrandom.shuffle(key)\nuser_input = input(\"Enter a message to encrypt: \")\nencrypted_string = \"\"\nif user_input == \"\":\n    print(\"Please enter a valid input\")\n    user_input = input(\"Enter a message to encrypt: \")\nelse:",
+        "detail": "encryption_program",
+        "documentation": {}
+    },
+    {
+        "label": "chars",
+        "kind": 5,
+        "importPath": "encryption_program",
+        "description": "encryption_program",
+        "peekOfCode": "chars = list(chars)\nkey = chars.copy()\nrandom.shuffle(key)\nuser_input = input(\"Enter a message to encrypt: \")\nencrypted_string = \"\"\nif user_input == \"\":\n    print(\"Please enter a valid input\")\n    user_input = input(\"Enter a message to encrypt: \")\nelse:\n    for char in user_input:",
+        "detail": "encryption_program",
+        "documentation": {}
+    },
+    {
+        "label": "key",
+        "kind": 5,
+        "importPath": "encryption_program",
+        "description": "encryption_program",
+        "peekOfCode": "key = chars.copy()\nrandom.shuffle(key)\nuser_input = input(\"Enter a message to encrypt: \")\nencrypted_string = \"\"\nif user_input == \"\":\n    print(\"Please enter a valid input\")\n    user_input = input(\"Enter a message to encrypt: \")\nelse:\n    for char in user_input:\n        index = chars.index(char)",
+        "detail": "encryption_program",
+        "documentation": {}
+    },
+    {
+        "label": "user_input",
+        "kind": 5,
+        "importPath": "encryption_program",
+        "description": "encryption_program",
+        "peekOfCode": "user_input = input(\"Enter a message to encrypt: \")\nencrypted_string = \"\"\nif user_input == \"\":\n    print(\"Please enter a valid input\")\n    user_input = input(\"Enter a message to encrypt: \")\nelse:\n    for char in user_input:\n        index = chars.index(char)\n        encrypted_string += key[index]\n    print(encrypted_string)",
+        "detail": "encryption_program",
+        "documentation": {}
+    },
+    {
+        "label": "encrypted_string",
+        "kind": 5,
+        "importPath": "encryption_program",
+        "description": "encryption_program",
+        "peekOfCode": "encrypted_string = \"\"\nif user_input == \"\":\n    print(\"Please enter a valid input\")\n    user_input = input(\"Enter a message to encrypt: \")\nelse:\n    for char in user_input:\n        index = chars.index(char)\n        encrypted_string += key[index]\n    print(encrypted_string)\nencrypted_string = input(\"Enter a message to decrypt: \")",
+        "detail": "encryption_program",
+        "documentation": {}
+    },
+    {
+        "label": "encrypted_string",
+        "kind": 5,
+        "importPath": "encryption_program",
+        "description": "encryption_program",
+        "peekOfCode": "encrypted_string = input(\"Enter a message to decrypt: \")\nuser_input = \"\"\nif encrypted_string == \"\":\n    print(\"Please enter a valid input\")\n    encrypted_string = input(\"Enter a message to encrypt: \")\nelse:\n    for char in encrypted_string:\n        index = key.index(char)\n        user_input += chars[index]\n    print(user_input)",
+        "detail": "encryption_program",
+        "documentation": {}
+    },
+    {
+        "label": "user_input",
+        "kind": 5,
+        "importPath": "encryption_program",
+        "description": "encryption_program",
+        "peekOfCode": "user_input = \"\"\nif encrypted_string == \"\":\n    print(\"Please enter a valid input\")\n    encrypted_string = input(\"Enter a message to encrypt: \")\nelse:\n    for char in encrypted_string:\n        index = key.index(char)\n        user_input += chars[index]\n    print(user_input)",
+        "detail": "encryption_program",
+        "documentation": {}
+    },
+    {
+        "label": "display_man",
+        "kind": 2,
+        "importPath": "hangman_game",
+        "description": "hangman_game",
+        "peekOfCode": "def display_man(wrong_guesses):\n    for line in hangman_art[wrong_guesses]:\n        print(line)\ndef display_hint(hint):\n    print(\" \".join(hint))\ndef display_answer(answer):\n    print(\" \".join(answer))\ndef main():\n    answer = random.choice(words)\n    hint = [\"_\" for _ in answer]",
+        "detail": "hangman_game",
+        "documentation": {}
+    },
+    {
+        "label": "display_hint",
+        "kind": 2,
+        "importPath": "hangman_game",
+        "description": "hangman_game",
+        "peekOfCode": "def display_hint(hint):\n    print(\" \".join(hint))\ndef display_answer(answer):\n    print(\" \".join(answer))\ndef main():\n    answer = random.choice(words)\n    hint = [\"_\" for _ in answer]\n    wrong_guesses = 0\n    guessed_letters = set()\n    is_running = True",
+        "detail": "hangman_game",
+        "documentation": {}
+    },
+    {
+        "label": "display_answer",
+        "kind": 2,
+        "importPath": "hangman_game",
+        "description": "hangman_game",
+        "peekOfCode": "def display_answer(answer):\n    print(\" \".join(answer))\ndef main():\n    answer = random.choice(words)\n    hint = [\"_\" for _ in answer]\n    wrong_guesses = 0\n    guessed_letters = set()\n    is_running = True\n    while is_running:\n        display_man(wrong_guesses)",
+        "detail": "hangman_game",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "hangman_game",
+        "description": "hangman_game",
+        "peekOfCode": "def main():\n    answer = random.choice(words)\n    hint = [\"_\" for _ in answer]\n    wrong_guesses = 0\n    guessed_letters = set()\n    is_running = True\n    while is_running:\n        display_man(wrong_guesses)\n        display_hint(hint)\n        guess = input(\"Enter a letter guess: \").lower()",
+        "detail": "hangman_game",
+        "documentation": {}
+    },
+    {
+        "label": "hangman_art",
+        "kind": 5,
+        "importPath": "hangman_game",
+        "description": "hangman_game",
+        "peekOfCode": "hangman_art = {0: (\"   \",\n                   \"   \",\n                   \"   \"),\n               1: (\" ◯ \",\n                   \"   \",\n                   \"   \"),\n               2: (\" ◯ \",\n                   \" | \",\n                   \"   \"),\n               3: (\" ◯ \",",
+        "detail": "hangman_game",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Python GUI with QT\")\n        self.setWindowIcon(QIcon(\"lightbulb.png\"))\n        self.button1 = QPushButton(\"#1\")\n        self.button2 = QPushButton(\"#2\")\n        self.button3 = QPushButton(\"#3\")\n        self.init_ui()\n    def init_ui(self):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    app = QApplication(sys.argv)\n    window = MainWindow()\n    window.show()\n    sys.exit(app.exec_())\nif __name__ == '__main__':\n    main()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "low",
+        "kind": 5,
+        "importPath": "number_guessing_game",
+        "description": "number_guessing_game",
+        "peekOfCode": "low = 1\nhigh = 100\nguesses = 0\nnumber = random.randint(low, high)\nis_running = True\nprint(\"A random number has been selected between 1 and 100, can you guess it?\")\nwhile is_running:\n    guess = input(\"Enter a guess: \")\n    if guess.isdigit():\n        guess = int(guess)",
+        "detail": "number_guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "high",
+        "kind": 5,
+        "importPath": "number_guessing_game",
+        "description": "number_guessing_game",
+        "peekOfCode": "high = 100\nguesses = 0\nnumber = random.randint(low, high)\nis_running = True\nprint(\"A random number has been selected between 1 and 100, can you guess it?\")\nwhile is_running:\n    guess = input(\"Enter a guess: \")\n    if guess.isdigit():\n        guess = int(guess)\n        guesses += 1",
+        "detail": "number_guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "guesses",
+        "kind": 5,
+        "importPath": "number_guessing_game",
+        "description": "number_guessing_game",
+        "peekOfCode": "guesses = 0\nnumber = random.randint(low, high)\nis_running = True\nprint(\"A random number has been selected between 1 and 100, can you guess it?\")\nwhile is_running:\n    guess = input(\"Enter a guess: \")\n    if guess.isdigit():\n        guess = int(guess)\n        guesses += 1\n        if guess != number:",
+        "detail": "number_guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "number_guessing_game",
+        "description": "number_guessing_game",
+        "peekOfCode": "number = random.randint(low, high)\nis_running = True\nprint(\"A random number has been selected between 1 and 100, can you guess it?\")\nwhile is_running:\n    guess = input(\"Enter a guess: \")\n    if guess.isdigit():\n        guess = int(guess)\n        guesses += 1\n        if guess != number:\n            if guess > high or guess < low:",
+        "detail": "number_guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "is_running",
+        "kind": 5,
+        "importPath": "number_guessing_game",
+        "description": "number_guessing_game",
+        "peekOfCode": "is_running = True\nprint(\"A random number has been selected between 1 and 100, can you guess it?\")\nwhile is_running:\n    guess = input(\"Enter a guess: \")\n    if guess.isdigit():\n        guess = int(guess)\n        guesses += 1\n        if guess != number:\n            if guess > high or guess < low:\n                print(\"Please enter a number between 1 and 100\")",
+        "detail": "number_guessing_game",
+        "documentation": {}
+    },
+    {
+        "label": "questions",
+        "kind": 5,
+        "importPath": "python_quiz",
+        "description": "python_quiz",
+        "peekOfCode": "questions = (\n    \"How many elements are in the periodic table?:\",\n    \"Which animal lays the largest eggs?:\",\n    \"What is the most abundant gas in the Earth's atmosphere?:\",\n    \"How many bones are in the human body?:\",\n    \"Which planet in the solar system is the hottest?:\"\n)\noptions = ((\"A. 116\", \"B. 117\", \"C. 118\", \"D. 119\"), (\"A. Whale\", \"B. Crocodile\", \"C. Elephant\", \"D. Ostrich\"),\n           (\"A. Nitrogen\", \"B. Oxygen\", \"C. Carbon-Dioxide\", \"D. Hydrogen\"), (\"A. 206\", 'B. 207', \"C. 208\", \"D. 209\"),\n           (\"A. Mercury\", \"B. Venus\", \"C. Earth\", \"D. Mars\"))",
+        "detail": "python_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "options",
+        "kind": 5,
+        "importPath": "python_quiz",
+        "description": "python_quiz",
+        "peekOfCode": "options = ((\"A. 116\", \"B. 117\", \"C. 118\", \"D. 119\"), (\"A. Whale\", \"B. Crocodile\", \"C. Elephant\", \"D. Ostrich\"),\n           (\"A. Nitrogen\", \"B. Oxygen\", \"C. Carbon-Dioxide\", \"D. Hydrogen\"), (\"A. 206\", 'B. 207', \"C. 208\", \"D. 209\"),\n           (\"A. Mercury\", \"B. Venus\", \"C. Earth\", \"D. Mars\"))\nanswers = (\"C\", \"D\", \"A\", \"A\", \"B\")\nguesses = []\nscore = 0\nquestion_num = 0\nfor question in questions:\n    print(\"--------\")\n    print(question)",
+        "detail": "python_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "answers",
+        "kind": 5,
+        "importPath": "python_quiz",
+        "description": "python_quiz",
+        "peekOfCode": "answers = (\"C\", \"D\", \"A\", \"A\", \"B\")\nguesses = []\nscore = 0\nquestion_num = 0\nfor question in questions:\n    print(\"--------\")\n    print(question)\n    for option in options[question_num]:\n        print(option)\n    guess = input(\"Choose an option: \").upper()",
+        "detail": "python_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "guesses",
+        "kind": 5,
+        "importPath": "python_quiz",
+        "description": "python_quiz",
+        "peekOfCode": "guesses = []\nscore = 0\nquestion_num = 0\nfor question in questions:\n    print(\"--------\")\n    print(question)\n    for option in options[question_num]:\n        print(option)\n    guess = input(\"Choose an option: \").upper()\n    guesses.append(guess)",
+        "detail": "python_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "score",
+        "kind": 5,
+        "importPath": "python_quiz",
+        "description": "python_quiz",
+        "peekOfCode": "score = 0\nquestion_num = 0\nfor question in questions:\n    print(\"--------\")\n    print(question)\n    for option in options[question_num]:\n        print(option)\n    guess = input(\"Choose an option: \").upper()\n    guesses.append(guess)\n    question_num += 1",
+        "detail": "python_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "question_num",
+        "kind": 5,
+        "importPath": "python_quiz",
+        "description": "python_quiz",
+        "peekOfCode": "question_num = 0\nfor question in questions:\n    print(\"--------\")\n    print(question)\n    for option in options[question_num]:\n        print(option)\n    guess = input(\"Choose an option: \").upper()\n    guesses.append(guess)\n    question_num += 1\ncurrent_question = 0",
+        "detail": "python_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "current_question",
+        "kind": 5,
+        "importPath": "python_quiz",
+        "description": "python_quiz",
+        "peekOfCode": "current_question = 0\nfor guess in guesses:\n    print()\n    if guess == answers[current_question]:\n        print(f\"Question {current_question + 1} ({questions[current_question]}) Correct!\")\n        print(\" \")\n        score += 1\n    else:\n        print(f\"Question {current_question + 1} ({questions[current_question]}) Wrong!\")\n        print(f\"Your answer: {guess}\")",
+        "detail": "python_quiz",
+        "documentation": {}
+    },
+    {
+        "label": "options",
+        "kind": 5,
+        "importPath": "rock_paper_scissors",
+        "description": "rock_paper_scissors",
+        "peekOfCode": "options = (\"rock\", \"paper\", \"scissors\")\nprint(\"Rock, Paper, Scissors game\")\nuser_score = 0\ncomputer_score = 0\nis_running = True\nwhile is_running:\n    user_choice = input(\"Please enter a choice i.e rock, paper or scissors (q for quit): \")\n    if user_choice.lower() in options:\n        computer_choice = random.choice(options)\n        print(f\"The computer chose {computer_choice}\")",
+        "detail": "rock_paper_scissors",
+        "documentation": {}
+    },
+    {
+        "label": "user_score",
+        "kind": 5,
+        "importPath": "rock_paper_scissors",
+        "description": "rock_paper_scissors",
+        "peekOfCode": "user_score = 0\ncomputer_score = 0\nis_running = True\nwhile is_running:\n    user_choice = input(\"Please enter a choice i.e rock, paper or scissors (q for quit): \")\n    if user_choice.lower() in options:\n        computer_choice = random.choice(options)\n        print(f\"The computer chose {computer_choice}\")\n        if user_choice == computer_choice:\n            print(\"TIE\")",
+        "detail": "rock_paper_scissors",
+        "documentation": {}
+    },
+    {
+        "label": "computer_score",
+        "kind": 5,
+        "importPath": "rock_paper_scissors",
+        "description": "rock_paper_scissors",
+        "peekOfCode": "computer_score = 0\nis_running = True\nwhile is_running:\n    user_choice = input(\"Please enter a choice i.e rock, paper or scissors (q for quit): \")\n    if user_choice.lower() in options:\n        computer_choice = random.choice(options)\n        print(f\"The computer chose {computer_choice}\")\n        if user_choice == computer_choice:\n            print(\"TIE\")\n        elif user_choice == \"rock\" and computer_choice == \"paper\":",
+        "detail": "rock_paper_scissors",
+        "documentation": {}
+    },
+    {
+        "label": "is_running",
+        "kind": 5,
+        "importPath": "rock_paper_scissors",
+        "description": "rock_paper_scissors",
+        "peekOfCode": "is_running = True\nwhile is_running:\n    user_choice = input(\"Please enter a choice i.e rock, paper or scissors (q for quit): \")\n    if user_choice.lower() in options:\n        computer_choice = random.choice(options)\n        print(f\"The computer chose {computer_choice}\")\n        if user_choice == computer_choice:\n            print(\"TIE\")\n        elif user_choice == \"rock\" and computer_choice == \"paper\":\n            print(\"Computer wins\")",
+        "detail": "rock_paper_scissors",
+        "documentation": {}
+    },
+    {
+        "label": "spin_row",
+        "kind": 2,
+        "importPath": "slot_machine",
+        "description": "slot_machine",
+        "peekOfCode": "def spin_row():\n    symbols = [\"🍒\", \"🍉\", \"🍋\", \"🔔\", \"⭐\"]\n    return [random.choice(symbols) for _ in range(3)]\ndef print_row(row):\n    print(\" \".join(row))\ndef get_payout(row, bet):\n    if row[0] == row[1] == row[2]:\n        if row[0] == \"🍒\":\n            return bet * 3\n        elif row[0] == \"🍉\":",
+        "detail": "slot_machine",
+        "documentation": {}
+    },
+    {
+        "label": "print_row",
+        "kind": 2,
+        "importPath": "slot_machine",
+        "description": "slot_machine",
+        "peekOfCode": "def print_row(row):\n    print(\" \".join(row))\ndef get_payout(row, bet):\n    if row[0] == row[1] == row[2]:\n        if row[0] == \"🍒\":\n            return bet * 3\n        elif row[0] == \"🍉\":\n            return bet * 4\n        elif row[0] == \"🍋\":\n            return bet * 5",
+        "detail": "slot_machine",
+        "documentation": {}
+    },
+    {
+        "label": "get_payout",
+        "kind": 2,
+        "importPath": "slot_machine",
+        "description": "slot_machine",
+        "peekOfCode": "def get_payout(row, bet):\n    if row[0] == row[1] == row[2]:\n        if row[0] == \"🍒\":\n            return bet * 3\n        elif row[0] == \"🍉\":\n            return bet * 4\n        elif row[0] == \"🍋\":\n            return bet * 5\n        elif row[0] == \"🔔\":\n            return bet * 10",
+        "detail": "slot_machine",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "slot_machine",
+        "description": "slot_machine",
+        "peekOfCode": "def main():\n    balance = 1000\n    print(\"Welcome to Python Slots\")\n    print(\"Symbols: 🍒 🍉 🍋 🔔 ⭐\")\n    while balance > 0:\n        print(f\"Current balance: ₦{balance}\")\n        bet = input(\"Place your bet amount: \")\n        if not bet.isdigit():\n            print(\"Please enter a number\")\n            continue",
+        "detail": "slot_machine",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "wordslist",
+        "description": "wordslist",
+        "peekOfCode": "words = (\n    \"apple\", \"river\", \"cloud\", \"forest\", \"orange\", \"keyboard\", \"mountain\",\n    \"silver\", \"window\", \"thunder\", \"garden\", \"pencil\", \"ocean\", \"rabbit\",\n    \"sunset\", \"coffee\", \"planet\", \"bridge\", \"marble\", \"castle\", \"violet\",\n    \"candle\", \"dragon\", \"meadow\", \"rocket\", \"island\", \"button\", \"shadow\",\n    \"winter\", \"banana\", \"mirror\", \"desert\", \"puzzle\", \"guitar\", \"whisper\",\n    \"lantern\", \"falcon\", \"breeze\", \"diamond\", \"rainbow\", \"pillow\", \"volcano\",\n    \"maple\", \"tunnel\", \"cactus\", \"butter\", \"star\", \"helmet\", \"feather\",\n    \"pocket\", \"harbor\", \"jungle\", \"cookie\", \"anchor\", \"sunflower\", \"blanket\",\n    \"thunder\", \"planet\", \"sapphire\", \"wagon\", \"rabbit\", \"notebook\", \"meadow\",",
+        "detail": "wordslist",
+        "documentation": {}
+    }
+]
