@@ -25,8 +25,12 @@ class Solution:
             rob2 = temp
         return rob2
 
+    def rob2(self, nums: list[int]):
+        return max(nums[0], self.rob(nums[1:]), self.rob(nums[:-1]))
+
 
 solution = Solution()
 print(solution.climbStairs(5))
 print(solution.minCostClimbingStairs([10, 15, 20]))
 print(solution.rob([1, 2, 3, 1]))
+print(solution.rob2([2, 3, 2]))
