@@ -28,9 +28,32 @@ class Solution:
     def rob2(self, nums: list[int]):
         return max(nums[0], self.rob(nums[1:]), self.rob(nums[:-1]))
 
+    @staticmethod
+    def longestPalindrome(s: str) -> str:
+        res = ""
+        resLen = 0
+        for i in range(len(s)):
+            l, r = i, i
+            while l >= 0 and r < len(s) and s[l] == s[r]:
+                if (r - l + 1) > resLen:
+                    res = s[l : r + 1]
+                    resLen = r - l + 1
+                l -= 1
+                r += 1
+
+            l, r = i, i + 1
+            while l >= 0 and r < len(s) and s[l] == s[r]:
+                if (r - l + 1) > resLen:
+                    res = s[l : r + 1]
+                    resLen = r - l + 1
+                l -= 1
+                r += 1
+        return res
+
 
 solution = Solution()
 print(solution.climbStairs(5))
 print(solution.minCostClimbingStairs([10, 15, 20]))
 print(solution.rob([1, 2, 3, 1]))
 print(solution.rob2([2, 3, 2]))
+print(solution.longestPalindrome("babad"))
