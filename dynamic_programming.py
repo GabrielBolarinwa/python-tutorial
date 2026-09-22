@@ -92,6 +92,22 @@ class Solution:
                     dp[a] = min(dp[a], 1 + dp[a - c])
         return dp[amount] if dp[amount] != amount + 1 else 0
 
+    @staticmethod
+    def maxProduct(nums: list[int]) -> int:
+        res = max(nums)
+        curMin, curMax = 1, 1
+
+        for n in nums:
+            if n == 0:
+                curMin, curMax = 1, 1
+                continue
+
+            temp = curMax * n
+            curMax = max(n * curMax, n * curMin, n)
+            curMin = min(temp, n * curMin, n)
+            res = max(res, curMax, curMin)
+        return res
+
 
 solution = Solution()
 print(solution.climbStairs(5))
@@ -102,3 +118,4 @@ print(solution.longestPalindrome("babad"))
 print(solution.num_of_palindromic_substrings("aaab"))
 print(solution.numDecodings("121"))
 print(solution.coinChange([1, 3, 4, 5], 7))
+print(solution.maxProduct([1, 2, 3, 5]))
