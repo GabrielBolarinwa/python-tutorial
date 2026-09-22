@@ -50,6 +50,22 @@ class Solution:
                 r += 1
         return res
 
+    def num_of_palindromic_substrings(self, s: str) -> int:
+        res = 0
+        for i in range(len(s)):
+            res += self.countPalindromes(i, i, s)
+            res += self.countPalindromes(i, i + 1, s)
+        return res
+
+    @staticmethod
+    def countPalindromes(l: int, r: int, s: str):
+        res = 0
+        while l >= 0 and r < len(s) and s[l] == s[r]:
+            res += 1
+            l -= 1
+            r += 1
+        return res
+
 
 solution = Solution()
 print(solution.climbStairs(5))
@@ -57,3 +73,4 @@ print(solution.minCostClimbingStairs([10, 15, 20]))
 print(solution.rob([1, 2, 3, 1]))
 print(solution.rob2([2, 3, 2]))
 print(solution.longestPalindrome("babad"))
+print(solution.num_of_palindromic_substrings("aaab"))
