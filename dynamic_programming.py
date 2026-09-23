@@ -108,6 +108,19 @@ class Solution:
             res = max(res, curMax, curMin)
         return res
 
+    @staticmethod
+    def wordBreak(s: str, wordDict: list[str]) -> bool:
+        dp = [False] * (len(s) + 1)
+        dp[len(s)] = True
+
+        for i in range(len(s) - 1, -1, -1):
+            for w in wordDict:
+                if (i + len(w)) <= len(s) and s[i : i + len(w)] == w:
+                    dp[i] = dp[i + len(w)]
+                if dp[i]:
+                    break
+        return dp[0]
+
 
 solution = Solution()
 print(solution.climbStairs(5))
@@ -119,3 +132,4 @@ print(solution.num_of_palindromic_substrings("aaab"))
 print(solution.numDecodings("121"))
 print(solution.coinChange([1, 3, 4, 5], 7))
 print(solution.maxProduct([1, 2, 3, 5]))
+print(solution.wordBreak("leetcode", ["leet", "code"]))
