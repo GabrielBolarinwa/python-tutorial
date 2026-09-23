@@ -130,6 +130,23 @@ class Solution:
                     LIS[i] = max(LIS[i], LIS[j] + 1)
         return max(LIS)
 
+    @staticmethod
+    def partition_equal_subset_sum(nums: list[int]) -> bool:
+        if sum(nums) % 2:
+            return False
+        dp = set()
+        dp.add(0)
+        target = sum(nums) // 2
+        for i in range(len(nums) - 1, -1, -1):
+            nextDP = set()
+            for t in dp:
+                if (t + nums[i]) == target:
+                    return True
+                nextDP.add(t + nums[i])
+                nextDP.add(t)
+            dp = nextDP
+        return target in dp
+
 
 solution = Solution()
 print(solution.climbStairs(5))
@@ -143,3 +160,4 @@ print(solution.coinChange([1, 3, 4, 5], 7))
 print(solution.maxProduct([1, 2, 3, 5]))
 print(solution.wordBreak("leetcode", ["leet", "code"]))
 print(solution.lengthOfLIS([1, 2, 4, 3]))
+print(solution.partition_equal_subset_sum([1, 5, 11, 5]))
