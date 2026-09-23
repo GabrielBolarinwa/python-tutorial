@@ -121,6 +121,15 @@ class Solution:
                     break
         return dp[0]
 
+    @staticmethod
+    def lengthOfLIS(nums: list[int]) -> int:
+        LIS = [1] * len(nums)
+        for i in range(len(nums) - 1, -1, -1):
+            for j in range(i + 1, len(nums)):
+                if nums[i] < nums[j]:
+                    LIS[i] = max(LIS[i], LIS[j] + 1)
+        return max(LIS)
+
 
 solution = Solution()
 print(solution.climbStairs(5))
@@ -133,3 +142,4 @@ print(solution.numDecodings("121"))
 print(solution.coinChange([1, 3, 4, 5], 7))
 print(solution.maxProduct([1, 2, 3, 5]))
 print(solution.wordBreak("leetcode", ["leet", "code"]))
+print(solution.lengthOfLIS([1, 2, 4, 3]))
