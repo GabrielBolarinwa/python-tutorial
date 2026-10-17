@@ -14,7 +14,7 @@ class Person(IPerson):
 
 class ProxyPerson(IPerson):
     def __init__(self):
-        self.person = Person()Pr
+        self.person = Person()
 
     def person_method(self):
         print("I am the proxy functionality")
